@@ -1,0 +1,85 @@
+<meta>
+
+	<!--
+	 *	*******************************************	*
+	 * Developed by:	-Rex-						*
+	 * Last modified:	11/04/2018					*
+	 * Description:									*
+	 *	*******************************************	*
+	 -->
+
+	<info name="Group System By -Rex-" version="2.0" type="script" author="-Rex-" description="A Nice Basic group system" />
+	<!--  				Made by -Rex-                   -->
+	<script src="creditos/mensajes.lua" type="server"/>
+	<script src="sistemas/events_system/system.lua" type="shared" cache="false"/>
+	
+	<!-- GUIS -->
+	<script src="usefull/client_functions.lua" type="client"/>
+	
+	<script src="client/interfaces/gui.lua" type="client" cache="false"/>
+	<script src="client/client.lua" type="client" cache="false"/>
+
+	
+	<!-- FUNCIONES EXPORTADAS O FUNCIONES UTILES -->
+	<script src="usefull/shared_functions.lua" type="shared"/>
+	<script src="usefull/server_functions.lua" type="server"/>
+	<script src="sistemas/mapnames/mapnames_c.lua" type="client" />
+	
+	<!-- SERVER SIDE -->
+	<script src="server/tables.lua" type="server"/>
+	<script src="server/create_delete_groups.lua" type="server"/>
+	<script src="server/events.lua" type="server"/>
+	<script src="server/kick_player.lua" type="server"/>
+	<script src="server/update_info.lua" type="server"/>
+	<script src="server/update_rank.lua" type="server"/>
+	<script src="server/start.lua" type="server"/>
+	<script src="server/join_quit.lua" type="server"/>
+	<script src="server/colors.lua" type="server"/>
+	<script src="server/invitations.lua" type="server"/>
+	<script src="server/triggers.lua" type="server"/>
+	<script src="server/cpn.lua" type="server" cache="false"/>
+	
+	<!-- FUNCIONES SQL -->
+	<script src="sistemas/sql/create_functions.lua" type="server"/>
+	<script src="sistemas/sql/update_functions.lua" type="server"/>
+	<script src="sistemas/sql/delete_functions.lua" type="server"/>
+	<script src="sistemas/sql/tables/sql_tables.lua" type="server"/>
+	<script src="sistemas/sql/query_functions.lua" type="server"/>
+
+	<!-- GROUPS CHECKER -->
+	<script src="sistemas/empty_groups/server.lua" type="server"/>
+
+	
+	
+
+	<!-- Sistema de notificaciones -->
+	<script src="sistemas/notify/c.lua" type="client" cache="false"/>
+	<script src="sistemas/notify/client.lua" type="client" cache="false"/>
+	<script src='sistemas/notify/server.lua' type='server' /> 
+
+	<!-- Sistema de Rangos -->
+	<script src="sistemas/rangos/client.lua" type="client" cache="false"/>
+	<script src='sistemas/rangos/server.lua' type='server' /> 
+	
+	<!-- Sistema de chat -->
+	<script src="sistemas/chatsystem/group_chat_client.lua" type="client" cache="false"/>
+	<script src="sistemas/chatsystem/group_chat.lua" type="server"/>
+
+	<!-- Sistema de registro -->
+	<script src="sistemas/logsystem/logclient.lua" type="client" />
+	<script src="sistemas/logsystem/logserver.lua" type="server"/>
+	
+	<!-- Sistema de alianza -->
+	<script src='sistemas/alianza/client.lua' type='client' cache="false" />  
+	<script src='sistemas/alianza/server.lua' type='server' />  
+
+	<!-- Sistema de panel de admin -->
+	<script src="sistemas/adm_panel/adminpanel_gui.lua" type="client" cache="false"/>
+	<script src="sistemas/adm_panel/admin_panel_server.lua" type="server"/>
+	<script src="sistemas/adm_panel/admin_panel_querys.lua" type="server"/>
+
+	
+	<!-- FUNCIONES EXPORTADAS -->
+	<export function="getPlayerGroup" type="server" />
+	<oop>true</oop>
+</meta>
