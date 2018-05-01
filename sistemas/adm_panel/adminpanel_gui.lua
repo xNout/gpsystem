@@ -20,7 +20,11 @@ addEvent( "refreshGPCListMmm", true )
 function gSetVisible( gui, bool )
     
     if ( bool ) then
-        setTimer( function( f ) guiSetVisible( f, true ); end, 500, 1, gui )
+        if( system_configs.GUI_co_effect ) then
+            setTimer( function( f ) guiSetVisible( f, true ); end, 500, 1, gui )
+        else
+            guiSetVisible( gui, true );
+        end
     else
         guiSetVisible( gui, false );
     end

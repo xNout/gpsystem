@@ -26,7 +26,7 @@
 	<script src="sistemas/mapnames/mapnames_c.lua" type="client" />
 	
 	<!-- SERVER SIDE -->
-	<script src="server/tables.lua" type="server"/>
+	<script src="server/tables.lua" type="shared"/>
 	<script src="server/create_delete_groups.lua" type="server"/>
 	<script src="server/events.lua" type="server"/>
 	<script src="server/kick_player.lua" type="server"/>
