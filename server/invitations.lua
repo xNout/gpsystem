@@ -6,7 +6,7 @@ function ( player_nick )
 	local source_group        = getPlayerGroup( source )
 --	other payer
 	local player         	  = Player( player_nick )
-	if ( source:getName() ~= player_nick ) then
+	if ( source:getName() == player_nick ) then
 		createNotification("No puedes invitarte tu mismo",source,200,0,0,true);
 		return;
 	end
