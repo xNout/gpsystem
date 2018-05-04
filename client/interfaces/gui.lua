@@ -228,7 +228,7 @@ PRINCIPALGUI.label[1] = guiCreateLabel(10, 29, 60, 15, "Color Tag", false, color
 guiSetFont(PRINCIPALGUI.label[1], "default-bold-small")
 PRINCIPALGUI.label[2] = guiCreateLabel(10, 91, 85, 15, "Color Mensaje", false, colorchangegui)
 guiSetFont(PRINCIPALGUI.label[2], "default-bold-small")
-PRINCIPALGUI.label[3] = guiCreateLabel(10, 194, 219, 63, "Web de colores Hexadecimales:\n\nhttps://color.adobe.com/es/explore/", false, colorchangegui)
+PRINCIPALGUI.label[3] = guiCreateLabel(10, 194, 219, 63, "Web de colores Hexadecimales:\nClick para copiar\nhttps://color.adobe.com/es/explore/", false, colorchangegui)
 guiSetFont(PRINCIPALGUI.label[3], "default-bold-small")
 guiLabelSetHorizontalAlign(PRINCIPALGUI.label[3], "left", true)    
 
@@ -649,3 +649,13 @@ function openAlianza(  )
 end
 addEventHandler("onClientGUIClick", buyslots, openAlianza, false)
 
+addEventHandler("onClientGUIClick", PRINCIPALGUI.label[3],
+function (  )
+  -- Codigo extraido de la wiki
+  -- https://wiki.multitheftauto.com/wiki/SetClipboard
+  local success = setClipboard( "https://color.adobe.com/es/explore/" )
+  if success then
+     createNotification( "Link copiado!");
+  end
+end
+ , false)
